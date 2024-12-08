@@ -1,7 +1,6 @@
 # CS(Computer-Science)
 
 ## 목표
-<hr/>
 
 - CS 기본 지식들을 깊이 있게 습득한다.
 
