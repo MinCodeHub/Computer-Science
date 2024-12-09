@@ -1,6 +1,7 @@
 # 🐘 Gradle
 ![img.png](img/java_gradle_1.png)
-### Java Build Tool
+
+## Java Build Tool
 
 > 소프트웨어 개발에서 소스코드를 실행 가능한 애플리케이션으로 만들어주는 도구
 
@@ -9,7 +10,7 @@
 
 - 종류: APACHE ANT, Maven, Gradle
 
-#### [ Ant(앤트) ]
+### [ Ant(앤트) ]
 
 - 설정을 위해 XML 스크립트를 사용한다.
 - 이클립스 IDE에 기본 탑재되어 있고, 간단하고 사용하기 쉽다.
@@ -19,7 +20,7 @@
 2000년대 초반에 사용했지만 최근엔 주로 레거시 시스템에서만 사용한다.
 
 
-#### [ Maven(메이븐) ]
+### [ Maven(메이븐) ]
 
 - 설정을 위해 XML 스크립트를 기반으로 하며, pom.xml 파일로 의존성 관리를 한다.
 - 외부 라이브러리를 관리할 수 있다.
@@ -30,7 +31,7 @@
 Maven은 Ant 이후에 나온 빌드 도구이다. Ant와 크게 달라진 점은 자동으로 외부 라이브러리를 관리하는 기능이 생긴 점이다.
 
 
-#### [ Gradle(그래들) ]
+### [ Gradle(그래들) ]
 
 - 설정을 위해 Groovy(그루비) 문법을 사용한다.
 - 외부 라이브러리를 관리할 수 있다.
@@ -44,11 +45,11 @@ Gradle은 가장 최근(2012년)에 나온 빌드 도구이다. 기존 빌드 �
 Build.gradle에 스크립트를 작성하여 사용한다.
 
 
-### Gradle을 사용하는 이유 (장점)
+## Gradle을 사용하는 이유 (장점)
 > 간결한 스크립트 작성, 빠른 빌드 속도, 멀티 모듈 빌드
 
 
-**1) 간결한 스크립트 작성**
+### 1) 간결한 스크립트 작성
 
    Ant와 Maven은 XML문법을 사용한다.
 
@@ -120,7 +121,7 @@ tasks.named('test') {
 ```
 
 
-**2) 빠른 빌드 속도**
+### 2) 빠른 빌드 속도
 
 - **점진적 빌드**
 
@@ -144,10 +145,12 @@ tasks.named('test') {
 Gradle vs Maven
 
 - **데몬(Daemon) 프로세스**
+
     서비스 요청에 응답하기 위해서 메모리 상에 빌드 결과물을 보관하는 오래 지속되는 프로세스이다.
     그래서 한 번 빌드된 프로젝트는 다음 빌드 시 시간이 단축된다.
 
-**3) 멀티 프로젝트 빌드**
+
+### 3) 멀티 프로젝트 빌드
 
 대규모 프로젝트에서는 멀티 모듈 프로젝트로 구성하게 된다.
 
@@ -160,7 +163,7 @@ $ ./gradlew :moduleName:build
 
 
 
-### ✔️ Gradle 사용
+## ✔️ Gradle 사용
 
 기본으로 생성했을 때 Gradle 프로젝트 구조이다.
 
@@ -177,11 +180,11 @@ $ ./gradlew :moduleName:build
 ```
 ![img.png](img/java_gradle_3.png)
 
-**[.gradle]**
+### [.gradle]
 
 Gradle이 사용하는 폴더로 작업(task)으로 생성된 파일이 저장된다.
 
-**[gradle]**
+### [gradle]
 
 gradle-wrapper와 관련된 폴더이다.
 
@@ -191,7 +194,7 @@ gradle-wrapper실행 명령으로도 task 실행이 가능하다.
 
 Java나 Gradle 설치할 필요없이 바로 프로젝트를 실행할 수 있다.
 
-**[gradlew, gralew.bat]**
+### [gradlew, gralew.bat]
 
 gradle-wrapper 실행 명렁이다.
 
@@ -204,7 +207,7 @@ $ ./gradlew [Task명]
 $ gradlew [Task명]
 ```
 
-**[settings.gradle]**
+### [settings.gradle]
 
 프로젝트에 대한 설정 정보를 작성하는 파일이다.
 
@@ -224,7 +227,7 @@ include 'Module-API'
 include 'Module-Domain'
 ```
 
-**[build.grdle]**
+### [build.grdle]
 
 프로젝트하면서 가장 많이 접할 파일이다.
 프로젝트에 필요한 의존성과 빌드 처리 내용을 작성하는 파일이다.
